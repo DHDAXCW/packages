@@ -151,6 +151,7 @@ CONFIGURE_ARGS += \
 	--with-openssl="$(STAGING_DIR)/usr" \
 	--without-lmdb \
 	--without-readline \
+	--enable-epoll \
 	--sysconfdir=/etc/bind
 
 ifdef CONFIG_BIND_LIBJSON
