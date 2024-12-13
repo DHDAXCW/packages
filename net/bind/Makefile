@@ -9,7 +9,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=bind
-PKG_VERSION:=9.20.4
+PKG_VERSION:=9.21.2
 PKG_RELEASE:=1
 USERID:=bind=57:bind=57
 
@@ -22,7 +22,7 @@ PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.xz
 PKG_SOURCE_URL:= \
 	https://www.mirrorservice.org/sites/ftp.isc.org/isc/bind9/$(PKG_VERSION) \
 	https://ftp.isc.org/isc/bind9/$(PKG_VERSION)
-PKG_HASH:=3a8e1a05e00e3e9bc02bdffded7862faf7726ba76ba997f42ab487777bd8210b
+PKG_HASH:=3233fbc9f3b45da5348a79a192e00712e0e16ba0167894b55ffacdafbe98efcb
 
 PKG_FIXUP:=autoreconf
 PKG_REMOVE_FILES:=aclocal.m4 libtool.m4
@@ -150,7 +150,6 @@ CONFIGURE_ARGS += \
 	--disable-geoip \
 	--with-openssl="$(STAGING_DIR)/usr" \
 	--without-lmdb \
-	--enable-epoll \
 	--without-readline \
 	--sysconfdir=/etc/bind
 
